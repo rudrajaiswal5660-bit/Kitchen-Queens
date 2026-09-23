@@ -24,7 +24,7 @@ export function Footer() {
   const companyLinks = [
     { label: "About", href: "#hero" },
     { label: "Contact", href: "#contact" },
-    { label: "Business Model", href: "#business" },
+    { label: "Quality Assurance", href: "#trust" },
   ];
 
   return (

@@ -10,7 +10,6 @@ import { SolutionSection }      from "@/components/sections/SolutionSection";
 import { FeaturedMealsSection } from "@/components/sections/FeaturedMealsSection";
 import { HowItWorksSection }    from "@/components/sections/HowItWorksSection";
 import { TargetMarketSection }  from "@/components/sections/TargetMarketSection";
-import { UnitEconomicsSection } from "@/components/sections/UnitEconomicsSection";
 import { WhyUsSection }         from "@/components/sections/WhyUsSection";
 import { TrustSection }         from "@/components/sections/TrustSection";
 import { KitchenQueenSection }  from "@/components/sections/KitchenQueenSection";
@@ -47,10 +46,7 @@ export default function Home() {
         {/* 7 — Who we serve */}
         <TargetMarketSection />
 
-        {/* 8 — Unit economics */}
-        <UnitEconomicsSection />
-
-        {/* 9 — Competitive advantage */}
+        {/* 8 — Competitive advantage */}
         <WhyUsSection />
 
         {/* 10 — Trust & quality pipeline */}
