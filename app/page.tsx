@@ -7,6 +7,7 @@ import { HeroSection }          from "@/components/sections/HeroSection";
 import { FoodWeMissSection }    from "@/components/sections/FoodWeMissSection";
 import { ProblemSection }       from "@/components/sections/ProblemSection";
 import { SolutionSection }      from "@/components/sections/SolutionSection";
+import { FeaturedMealsSection } from "@/components/sections/FeaturedMealsSection";
 import { HowItWorksSection }    from "@/components/sections/HowItWorksSection";
 import { TargetMarketSection }  from "@/components/sections/TargetMarketSection";
 import { UnitEconomicsSection } from "@/components/sections/UnitEconomicsSection";
@@ -34,13 +35,16 @@ export default function Home() {
         {/* 3 — The problem */}
         <ProblemSection />
 
-        {/* 4 — The solution journey */}
+        {/* 4 — The solution journey (glass step cards) */}
         <SolutionSection />
 
-        {/* 5 — Interactive app demo */}
+        {/* 5 — Featured meal cards (demo-inspired) */}
+        <FeaturedMealsSection />
+
+        {/* 6 — Interactive app demo */}
         <HowItWorksSection />
 
-        {/* 6 — Who we serve */}
+        {/* 7 — Who we serve */}
         <TargetMarketSection />
 
         {/* 8 — Unit economics */}

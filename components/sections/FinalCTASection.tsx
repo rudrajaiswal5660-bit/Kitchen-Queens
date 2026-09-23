@@ -25,15 +25,16 @@ export function FinalCTASection() {
     <section
       id="final-cta"
       className="relative py-24 sm:py-32 overflow-hidden"
-      style={{ background: "var(--color-cream)" }}
+      style={{ background: "var(--color-charcoal)" }}
     >
       {/* Ambient glows */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full blur-3xl"
-          style={{ background: "var(--color-brand-red)", opacity: 0.045 }} />
+          style={{ background: "var(--color-brand-red)", opacity: 0.08 }} />
         <div className="absolute bottom-0 right-8 w-[380px] h-[380px] rounded-full blur-2xl"
-          style={{ background: "var(--color-saffron)", opacity: 0.06 }} />
+          style={{ background: "var(--color-saffron)", opacity: 0.1 }} />
       </div>
+
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
 
@@ -44,7 +45,7 @@ export function FinalCTASection() {
           whileInView="visible"
           viewport={viewport}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold mb-6"
-          style={{ background: "rgba(192,57,43,0.08)", color: "var(--color-brand-red)", border: "1px solid rgba(192,57,43,0.18)", fontFamily: "var(--font-inter)" }}
+          style={{ background: "rgba(230,126,34,0.18)", color: "var(--color-saffron)", border: "1px solid rgba(230,126,34,0.3)", fontFamily: "var(--font-inter)" }}
         >
           <Sparkles className="w-4 h-4" />
           Fresh. Hygienic. Homemade.
@@ -58,7 +59,7 @@ export function FinalCTASection() {
             stagger={0.07}
             style={{
               fontFamily: "var(--font-playfair)",
-              color: "var(--color-charcoal)",
+              color: "var(--color-warm-white)",
               fontSize: "clamp(2.2rem, 5vw, 3.8rem)",
               fontWeight: 700,
               letterSpacing: "-0.025em",
@@ -75,10 +76,11 @@ export function FinalCTASection() {
           viewport={viewport}
           transition={{ delay: 0.2 }}
           className="text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
-          style={{ fontFamily: "var(--font-inter)", color: "var(--color-charcoal)", opacity: 0.68 }}
+          style={{ fontFamily: "var(--font-inter)", color: "var(--color-warm-white)", opacity: 0.65 }}
         >
           {FINAL_CTA.subtext}
         </motion.p>
+
 
         {/* CTA buttons */}
         <motion.div
@@ -109,7 +111,7 @@ export function FinalCTASection() {
           whileInView="visible"
           viewport={viewport}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto pt-8"
-          style={{ borderTop: "1px solid rgba(28,28,30,0.10)" }}
+          style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}
         >
           {TRUST_BADGES.map(({ icon: Icon, label, sub, bg, color }) => (
             <motion.div
@@ -126,12 +128,13 @@ export function FinalCTASection() {
                 <Icon className="w-5 h-5" style={{ color }} />
               </motion.div>
               <div className="text-left">
-                <p className="font-semibold text-sm" style={{ fontFamily: "var(--font-inter)", color: "var(--color-charcoal)" }}>{label}</p>
-                <p className="text-xs mt-0.5" style={{ fontFamily: "var(--font-inter)", color: "var(--color-charcoal)", opacity: 0.55 }}>{sub}</p>
+                <p className="font-semibold text-sm" style={{ fontFamily: "var(--font-inter)", color: "var(--color-warm-white)" }}>{label}</p>
+                <p className="text-xs mt-0.5" style={{ fontFamily: "var(--font-inter)", color: "var(--color-warm-white)", opacity: 0.45 }}>{sub}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </section>
   );

@@ -198,8 +198,7 @@ export function KitchenQueenSection() {
       id="kitchen-queen"
       ref={sectionRef}
       style={{
-        background:
-          "linear-gradient(160deg, var(--color-cream) 0%, #FEF0E2 50%, #FDF5EC 100%)",
+        background: "var(--color-charcoal)",
       }}
       className="relative py-24 px-4 overflow-hidden"
     >
@@ -208,7 +207,7 @@ export function KitchenQueenSection() {
         aria-hidden="true"
         className="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(230,126,34,0.07) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(230,126,34,0.12) 0%, transparent 70%)",
           transform: "translate(30%, -30%)",
         }}
       />
@@ -225,7 +224,7 @@ export function KitchenQueenSection() {
             className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1 rounded-full"
             style={{
               color: "var(--color-saffron)",
-              background: "rgba(230,126,34,0.1)",
+              background: "rgba(230,126,34,0.15)",
               fontFamily: "var(--font-inter)",
             }}
           >
@@ -246,7 +245,7 @@ export function KitchenQueenSection() {
               className="text-5xl font-bold leading-tight"
               style={{
                 fontFamily: "var(--font-playfair)",
-                color: "var(--color-brand-red)",
+                color: "var(--color-warm-white)",
               }}
             >
               {headline}
@@ -257,8 +256,7 @@ export function KitchenQueenSection() {
               className="text-lg leading-relaxed max-w-lg"
               style={{
                 fontFamily: "var(--font-inter)",
-                color: "var(--color-charcoal)",
-                opacity: 0.78,
+                color: "rgba(255,253,249,0.7)",
               }}
             >
               {subheadline}
@@ -312,10 +310,10 @@ export function KitchenQueenSection() {
                     {s.step}
                   </div>
                   <div>
-                    <p className="font-semibold text-sm" style={{ color: "var(--color-charcoal)", fontFamily: "var(--font-inter)" }}>
+                    <p className="font-semibold text-sm" style={{ color: "var(--color-warm-white)", fontFamily: "var(--font-inter)" }}>
                       {s.title}
                     </p>
-                    <p className="text-xs mt-0.5" style={{ color: "var(--color-charcoal)", opacity: 0.6, fontFamily: "var(--font-inter)" }}>
+                    <p className="text-xs mt-0.5" style={{ color: "rgba(255,253,249,0.55)", fontFamily: "var(--font-inter)" }}>
                       {s.desc}
                     </p>
                   </div>
@@ -327,7 +325,7 @@ export function KitchenQueenSection() {
             <motion.p
               variants={itemVariants}
               className="text-xs"
-              style={{ color: "var(--color-charcoal)", opacity: 0.4, fontFamily: "var(--font-inter)" }}
+              style={{ color: "rgba(255,253,249,0.4)", fontFamily: "var(--font-inter)" }}
             >
               Income opportunity varies by location, demand, and meal volume.
             </motion.p>

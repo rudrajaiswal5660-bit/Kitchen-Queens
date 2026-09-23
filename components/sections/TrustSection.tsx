@@ -95,37 +95,39 @@ export function TrustSection() {
     >
       {/* Section label */}
       <div className="max-w-4xl mx-auto text-center mb-4">
-        <motion.span
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1 rounded-full"
-          style={{
-            color: "var(--color-brand-red)",
-            background: "rgba(192,57,43,0.08)",
-            fontFamily: "var(--font-inter)",
-          }}
         >
-          Quality Assurance
-        </motion.span>
+          <span className="pill-badge">
+            <span className="pill-dot" />
+            Quality Assurance
+          </span>
+        </motion.div>
       </div>
 
       {/* Headline */}
       <div className="max-w-4xl mx-auto text-center mb-16">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+          className="font-bold leading-tight"
           style={{
             fontFamily: "var(--font-playfair)",
             color: "var(--color-charcoal)",
+            fontSize: "clamp(2rem, 4.5vw, 3.2rem)",
+            letterSpacing: "-0.025em",
           }}
         >
           Home-cooked doesn&apos;t mean compromising on{" "}
-          <span style={{ color: "var(--color-brand-red)" }}>standards.</span>
+          <span className="gradient-text">standards.</span>
         </motion.h2>
       </div>
+
 
       {/* Pipeline */}
       <div className="max-w-2xl mx-auto">
@@ -177,12 +179,9 @@ export function TrustSection() {
 
                 {/* Right: content card */}
                 <div
-                  className="flex-1 flex items-center justify-between rounded-2xl px-5 py-4 mb-5"
-                  style={{
-                    background: "var(--color-warm-white)",
-                    boxShadow: "0 2px 16px rgba(28,28,30,0.06)",
-                  }}
+                  className="glass flex-1 flex items-center justify-between px-5 py-4 mb-5"
                 >
+
                   <div className="flex items-center gap-4">
                     <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"

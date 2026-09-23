@@ -13,11 +13,11 @@ export const BRAND = {
 
 // ─── Navigation ──────────────────────────────────────────────
 export const NAV_LINKS = [
-  { label: "Home",     href: "#hero" },
-  { label: "Problem",  href: "#problem" },
-  { label: "Solution", href: "#solution" },
-  { label: "Business", href: "#business" },
-  { label: "Why Us",   href: "#why-us" },
+  { label: "Home",              href: "#hero" },
+  { label: "How It Works",      href: "#solution" },
+  { label: "Meal Plans",        href: "#how-it-works" },
+  { label: "Home Cooks",        href: "#kitchen-queen" },
+  { label: "Why Us",            href: "#why-us" },
 ] as const;
 
 
@@ -283,6 +283,37 @@ export const INDIA_CITIES: Record<string, { x: number; y: number; label: string 
   Jaipur:     { x: 195, y: 200, label: "Jaipur" },
   Lucknow:    { x: 240, y: 195, label: "Lucknow" },
 };
+
+// ─── Featured Meals (illustrative showcase) ───────────────────
+export const FEATURED_MEALS = [
+  {
+    emoji: "🍲",
+    name: "Dal Tadka & Rice",
+    category: "North Indian",
+    cookLabel: "By a verified home cook",
+    priceLabel: "From ₹80",
+    accentColor: "#F5A623",
+    bgGradient: "linear-gradient(135deg, #FFF3D6 0%, #FFE8A0 100%)",
+  },
+  {
+    emoji: "🍛",
+    name: "Rajma Chawal",
+    category: "North Indian",
+    cookLabel: "By a verified home cook",
+    priceLabel: "From ₹80",
+    accentColor: "#C0392B",
+    bgGradient: "linear-gradient(135deg, #FFE8E4 0%, #FFCFC8 100%)",
+  },
+  {
+    emoji: "🥘",
+    name: "Aloo Sabzi & Phulka",
+    category: "Home Style",
+    cookLabel: "By a verified home cook",
+    priceLabel: "From ₹80",
+    accentColor: "#27AE60",
+    bgGradient: "linear-gradient(135deg, #E8F8EE 0%, #C8F0D8 100%)",
+  },
+] as const;
 
 // ─── Final CTA ────────────────────────────────────────────────
 export const FINAL_CTA = {

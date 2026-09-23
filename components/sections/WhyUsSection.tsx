@@ -15,6 +15,7 @@ import { useInView } from "@/hooks/useInView";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { ADVANTAGES, COMPARISON_ROWS } from "@/lib/constants";
+import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
 
 // --- Icon map -----------------------------------------------------------------
 
@@ -79,41 +80,44 @@ export function WhyUsSection() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Section label */}
-        <motion.p
-          variants={itemVariants}
+        {/* Section header */}
+        <motion.div
+          className="text-center mb-16"
+          variants={staggerContainer(0.1)}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="mb-3 text-center text-xs font-semibold uppercase tracking-widest"
-          style={{ color: "var(--color-brand-red)", fontFamily: "var(--font-inter)" }}
+          whileInView="visible"
+          viewport={viewport}
         >
-          Competitive Edge
-        </motion.p>
-
-        {/* Headline */}
-        <motion.h2
-          variants={itemVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="mb-16 text-center text-4xl font-bold leading-tight lg:text-5xl"
-          style={{
-            fontFamily: "var(--font-playfair)",
-            color: "var(--color-charcoal)",
-          }}
-        >
-          Why{" "}
-          <em style={{ color: "var(--color-brand-red)", fontStyle: "italic" }}>
-            Ghar Ka Khaana?
-          </em>
-        </motion.h2>
+          <motion.div variants={fadeUp} className="mb-3">
+            <span className="pill-badge">
+              <span className="pill-dot" />
+              Competitive Edge
+            </span>
+          </motion.div>
+          <motion.h2
+            variants={fadeUp}
+            className="font-bold leading-tight"
+            style={{
+              fontFamily: "var(--font-playfair)",
+              color: "var(--color-charcoal)",
+              fontSize: "clamp(2rem, 4vw, 3.2rem)",
+              letterSpacing: "-0.025em",
+            }}
+          >
+            Why{" "}
+            <span className="gradient-text">Ghar Ka Khaana?</span>
+          </motion.h2>
+        </motion.div>
 
         {/* -- Advantage cards (3+2 layout) --------------- */}
         <motion.div
-          variants={containerVariants}
+          variants={staggerContainer(0.1)}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          whileInView="visible"
+          viewport={viewport}
           className="mb-20"
         >
+
           {/* First row: 3 cards */}
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-3 mb-5">
             {ADVANTAGES.slice(0, 3).map((adv) => {
@@ -178,7 +182,7 @@ export function WhyUsSection() {
               return (
                 <motion.div key={adv.id} variants={itemVariants}>
                   <TiltCard
-                    className="rounded-2xl bg-white p-6"
+                    className="glass rounded-2xl p-6"
                     maxTilt={8}
                     scale={1.025}
                   >
