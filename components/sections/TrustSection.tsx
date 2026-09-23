@@ -9,6 +9,7 @@ import {
   Truck,
   Star,
   ClipboardList,
+  type LucideIcon,
 } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -23,7 +24,7 @@ const FALLBACK_PIPELINE = [
   { label: "Customer Feedback Loop", icon: "Star" },
 ];
 
-const ICON_MAP: Record<string, React.ElementType> = {
+const ICON_MAP: Record<string, LucideIcon> = {
   ClipboardList,
   ShieldCheck,
   Thermometer,
@@ -60,8 +61,7 @@ function AnimatedCheckmark({ visible }: { visible: boolean }) {
 
 export function TrustSection() {
   const reducedMotion = useReducedMotion();
-  const sectionRef = useRef<HTMLElement>(null);
-  const isInView = useInView(sectionRef, { threshold: 0.1, once: true });
+  const [sectionRef, isInView] = useInView<HTMLElement>({ threshold: 0.1, once: true });
 
   const pipeline =
     QUALITY_PIPELINE && QUALITY_PIPELINE.length > 0

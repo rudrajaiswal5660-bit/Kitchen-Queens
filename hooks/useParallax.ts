@@ -26,7 +26,7 @@ export function useParallax<T extends HTMLElement>(
   strength = 80
 ): MotionValue<number> {
   const { scrollYProgress } = useScroll({
-    target: elementRef as React.RefObject<Element>,
+    target: elementRef as unknown as React.RefObject<HTMLElement | null>,
     offset: ["start end", "end start"],
   });
 
