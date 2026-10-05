@@ -152,9 +152,6 @@ export function Footer() {
           <p className="text-xs" style={{ opacity: 0.35, fontFamily: "var(--font-inter)" }}>
             © {new Date().getFullYear()} Kitchen Queens. All rights reserved.
           </p>
-          <p className="text-xs" style={{ opacity: 0.35, fontFamily: "var(--font-inter)" }}>
-            A Ghar Ka Khaana initiative by Raj Gupta
-          </p>
         </div>
       </div>
     </footer>
