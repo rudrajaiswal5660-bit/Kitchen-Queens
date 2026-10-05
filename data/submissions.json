@@ -1,0 +1,32 @@
+[
+  {
+    "id": "KQ-98214",
+    "name": "Sunita Sharma",
+    "phone": "9811223344",
+    "email": "sunita.sharma@example.com",
+    "locality": "South Delhi (Saket, Hauz Khas, GK)",
+    "availability": "Everyday",
+    "dietaryPreference": "Pure Vegetarian",
+    "cuisines": ["North Indian", "Ghar Ki Thali"],
+    "mealType": "Both Lunch & Dinner",
+    "kitchenAddress": "Block C, Saket, New Delhi",
+    "specialDish": "Dal Makhani, Stuffed Parathas",
+    "status": "pending",
+    "submittedAt": "2026-10-04T12:30:00.000Z"
+  },
+  {
+    "id": "KQ-73412",
+    "name": "Meenakshi Iyer",
+    "phone": "9876543210",
+    "email": "meenakshi.iyer@example.com",
+    "locality": "Gurgaon / Gurugram (DLF, Cyber City, Sohna)",
+    "availability": "Weekdays only",
+    "dietaryPreference": "Jain / Sattvic",
+    "cuisines": ["South Indian", "Healthy / Low-Oil"],
+    "mealType": "Lunch only",
+    "kitchenAddress": "DLF Phase 2, Gurugram",
+    "specialDish": "Traditional Sambar & Podi Idli",
+    "status": "contacted",
+    "submittedAt": "2026-10-05T08:15:00.000Z"
+  }
+]

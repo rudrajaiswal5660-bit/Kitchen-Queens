@@ -1,9 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { HomeCookModal } from "@/components/ui/HomeCookModal";
 import { KITCHEN_QUEEN } from "@/lib/constants";
 import { EASE } from "@/lib/animations";
 
@@ -184,8 +186,9 @@ function KitchenIllustration({ reducedMotion }: { reducedMotion: boolean }) {
 
 export function KitchenQueenSection() {
   const reducedMotion = useReducedMotion();
-  // useInView creates and returns its own ref — no need to pass one in
   const [sectionRef, isInView] = useInView<HTMLElement>({ threshold: 0.1, once: true });
+  const [modalOpen, setModalOpen] = useState(false);
+
 
   const headline =
     KITCHEN_QUEEN?.headline ?? "Cook from home. Earn from the heart.";
@@ -290,6 +293,7 @@ export function KitchenQueenSection() {
                   fontFamily: "var(--font-inter)",
                   boxShadow: "0 4px 20px rgba(192,57,43,0.35)",
                 }}
+                onClick={() => setModalOpen(true)}
               >
                 Become a Home Cook
               </MagneticButton>
@@ -363,6 +367,9 @@ export function KitchenQueenSection() {
           </motion.div>
         </div>
       </div>
+
+      {/* Interactive Home Cook Quiz Modal */}
+      <HomeCookModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }

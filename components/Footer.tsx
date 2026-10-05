@@ -3,6 +3,10 @@ import { BRAND, FOOTER_LINKS } from "@/lib/constants";
 
 export function Footer() {
   const scrollTo = (href: string) => {
+    if (href.startsWith("/")) {
+      window.location.href = href;
+      return;
+    }
     const id = href.replace("#", "");
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -25,6 +29,7 @@ export function Footer() {
     { label: "About", href: "#hero" },
     { label: "Contact", href: "#contact" },
     { label: "Quality Assurance", href: "#trust" },
+    { label: "Admin DB Portal", href: "/admin" },
   ];
 
   return (
